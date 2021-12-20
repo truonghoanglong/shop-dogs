@@ -9,7 +9,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import axios from 'axios';
+
 import {CartContext} from './Contexts/CartContext'
 
 
