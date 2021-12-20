@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import React,{useState} from 'react';
 import './App.css';
 import Home from './conponents/Home/Home'
 import DogsPage from './conponents/Dogs/DogsPage';
@@ -9,13 +9,13 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import axios from 'axios'
+
 import {CartContext} from './Contexts/CartContext'
 
 
 
 function App() {
-  const [dogs, setDogs] = useState([
+  const [dogs] = useState([
     {
       "id":1,
       "name":"Tini",
@@ -85,15 +85,6 @@ function App() {
   const [myCart, setMyCart] = useState([{}])
   const [total,setTotal]= useState(0)
 
-  useEffect(() => { 
-    async function getData(){
-      const res = await axios.get("/dogs")
-      return res;
-    }
-    
-    getData().then((res)=>setDogs(res.data))
-    getData().catch((err)=>console.log(err))
-  }, [])
 
 
 
