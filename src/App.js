@@ -9,7 +9,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-
+import axios from 'axios';
 import {CartContext} from './Contexts/CartContext'
 
 
@@ -80,7 +80,15 @@ function App() {
       "price":"4700",
       "description": "A dog knows how to fight",
       "imageUrl":"https://images.unsplash.com/photo-1543071220-6ee5bf71a54e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Ym94ZXIlMjBkb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
-    }
+    },
+    {
+      "id":9,
+      "name":"Tini",
+      "breed":"CHIHUAHUA",
+      "price":"1000",
+      "description": "This is a crazy tiny dog with big alien eyes",
+      "imageUrl": "https://images.unsplash.com/photo-1605639156481-244775d6f803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    },
   ])
   const [myCart, setMyCart] = useState([{}])
   const [total,setTotal]= useState(0)
